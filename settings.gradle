@@ -1,0 +1,13 @@
+rootProject.name = 'Gazoline'
+
+def rootD = getRootDir()
+def rootP = getRootProject()
+
+//Applications
+createProjectDescriptor(rootP, "web", file("${rootD}/apps/web"))
+createProjectDescriptor(rootP, "android", file("${rootD}/apps/android"))
+
+
+//Modules
+createProjectDescriptor(rootP, "core", file("${rootD}/modules/core"))
+createProjectDescriptor(rootP, "commons", file("${rootD}/modules/commons"))

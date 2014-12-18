@@ -1,0 +1,53 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+	dependencies {
+		classpath group: 'org.gradlefx', name: 'gradlefx', version: '1.0'
+	}
+}
+
+
+subprojects {
+	apply plugin: 'gradlefx'
+	apply plugin: 'ideafx'
+	apply plugin: 'flashbuilder'
+
+	flexSdkName = 'air-sdk'
+	
+	playerVersion = '13.0'
+	
+	frameworkLinkage = 'none'
+
+	type = 'swc'
+	
+	flexHome = System.getenv()['FLEX_HOME']
+
+    ext.IOS_HOME =           "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk"
+    ext.IOS_SIMULATOR_HOME = "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk"
+
+
+	def workDir = project.projectDir
+	
+	air {
+			keystore        "${project.rootDir}/etc/cert/certificate.p12"
+			storepass       'bi-lingvo-zagadki'
+
+			includeFileTrees = [
+					fileTree(dir: './..', include: 'icons/**/*.*'),
+					fileTree(dir: './..', include: 'images/**/*.*'),
+					fileTree(dir: './..', include: 'sounds/**/*.*')
+			]
+	}
+	
+	airMobile {
+		extensionDir "${workDir}/shared-ane"
+		platformSdk System.getenv()['ANDROID_HOME']
+		simulatorPlatformSdk System.getenv()['ANDROID_HOME']
+		targetDevice "4301e808bac490e2"
+		simulatorTarget "apk-emulator"
+		simulatorTargetDevice "emulator-5556"
+	}		
+	
+}

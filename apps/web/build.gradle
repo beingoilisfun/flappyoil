@@ -1,0 +1,8 @@
+type = 'swf'
+
+mainClass = 'com.chaoslabgames.web.WebMain'
+
+dependencies {
+    merged project(':core')
+    merged project(':commons')
+}

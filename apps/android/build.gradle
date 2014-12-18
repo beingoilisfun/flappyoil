@@ -1,0 +1,8 @@
+type='mobile'
+
+mainClass = 'com.chaoslabgames.android.AndroidMain'
+
+dependencies {
+    merged project(':core')
+    merged project(':commons')
+}

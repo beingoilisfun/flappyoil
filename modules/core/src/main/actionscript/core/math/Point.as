@@ -1,4 +1,4 @@
-package com.chaoslabgames.game.core.math
+package core.math
 {
 	public class Point 
 	{

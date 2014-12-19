@@ -1,4 +1,4 @@
-package com.chaoslabgames.game.core.physic
+package core.physic
 {
 	import core.math.Point;
 	

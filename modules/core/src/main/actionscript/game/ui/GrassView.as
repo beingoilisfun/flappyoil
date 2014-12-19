@@ -1,5 +1,4 @@
-package com.chaoslabgames.game.ui
-{
+package game.ui {
 	import flash.display.Bitmap;
 	import flash.display.Sprite;
 	

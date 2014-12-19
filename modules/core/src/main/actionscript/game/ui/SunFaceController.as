@@ -1,5 +1,4 @@
-package com.chaoslabgames.game.ui
-{
+package game.ui {
 	import com.greensock.TweenLite;
 	import flash.display.MovieClip;
 	import flash.display.Sprite;

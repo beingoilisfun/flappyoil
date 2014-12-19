@@ -1,4 +1,4 @@
-package com.chaoslabgames.game.core.ui
+package core.ui
 {
 	
 	public class RandomRange 

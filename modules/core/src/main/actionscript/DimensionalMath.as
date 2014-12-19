@@ -1,4 +1,4 @@
-package com.chaoslabgames.game
+package 
 {
 	import flash.geom.Vector3D;
 

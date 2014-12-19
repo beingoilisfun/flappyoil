@@ -1,4 +1,4 @@
-package  com.chaoslabgames.game.core
+package  core
 {
 	/**
 	 * ...

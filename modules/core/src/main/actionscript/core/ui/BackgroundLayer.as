@@ -1,4 +1,4 @@
-package com.chaoslabgames.game.core.ui {
+package core.ui {
 	import core.WorldStep;
 	import flash.display.DisplayObject;
 	import flash.display.Sprite;

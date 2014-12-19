@@ -1,5 +1,4 @@
-package com.chaoslabgames.game.ui
-{
+package game.ui {
 	import core.ui.Background;
 	import core.ui.BackgroundLayer;
 	import core.ui.RandomPositionBackgroundLayer;

@@ -1,4 +1,4 @@
-package com.chaoslabgames.game
+package 
 {
 	import core.physic.PhysicWorld;
 	import core.physic.RiggBody;

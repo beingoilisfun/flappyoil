@@ -27,21 +27,32 @@ package
 		
 		public function Main():void 
 		{
+			if (this.stage) {
+				onAddedToStage(null);
+			} else {
+				this.addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
+			}
+
+		}
+
+		private function onAddedToStage(event:Event):void {
+			this.removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
+
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 			stage.align = StageAlign.TOP_LEFT;
 			stage.addEventListener(Event.DEACTIVATE, deactivate);
-			
+
 			// touch or gesture?
 			//Multitouch.inputMode = MultitouchInputMode.TOUCH_POINT;
-			
+
 			background = GameBackgroundBuilder.create(stage);
-			
+
 			addChild(background);
-			
+
 			physicWorld = new PhysicWorld();
 			physicWorld.setGravity(0, 1000);
-			
-			
+
+
 			body = new RiggBody();
 			body.skin = new Skin();
 			var bitmapOil:Bitmap = new Bitmap(new oil);
@@ -49,19 +60,19 @@ package
 			bitmapOil.x -= 80 * 0.5
 			bitmapOil.y -= 45 * 0.5
 			body.skin.addChild(bitmapOil);
-			
+
 			physicWorld.addBody(body);
-			
+
 			addChild(body.skin);
-			
+
 			body.physicBody.position.y = 200;
 			body.physicBody.position.x = (stage.stageWidth - 25)/2;
 			//body.physicBody.linearVelocity.x = 150;
-			
+
 			//addEventListener(Event.ENTER_FRAME, onFrame);
 			stage.addEventListener(MouseEvent.MOUSE_DOWN, onkeyDown);
-			
-			
+
+
 			var timer:Timer = new Timer(1000 / 60);
 			timer.addEventListener(TimerEvent.TIMER, onFrame);
 			timer.start();

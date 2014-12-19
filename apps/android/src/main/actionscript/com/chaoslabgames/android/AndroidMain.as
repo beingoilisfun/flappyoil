@@ -1,12 +1,8 @@
 package com.chaoslabgames.android  {
 
-import com.chaoslabgames.game.Game;
-
 import flash.display.Sprite;
-	import flash.display.StageAlign;
-	import flash.display.StageScaleMode;
-import flash.text.TextField;
-
+import flash.display.StageAlign;
+import flash.display.StageScaleMode;
 
 public class AndroidMain extends Sprite {
 		
@@ -18,7 +14,7 @@ public class AndroidMain extends Sprite {
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;
 
-			addChild(new Game("Hello My Android friends!"))
+			addChild(new Main())
 		}
 		
 	}

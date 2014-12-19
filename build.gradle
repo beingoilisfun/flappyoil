@@ -16,12 +16,13 @@ subprojects {
 
 	flexSdkName = 'air-sdk'
 	
-	playerVersion = '13.0'
-	
+
 	frameworkLinkage = 'none'
 
 	type = 'swc'
-	
+
+	playerVersion = '15.0'
+
 	flexHome = System.getenv()['FLEX_HOME']
 
     ext.IOS_HOME =           "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk"
@@ -29,7 +30,7 @@ subprojects {
 
 
 	def workDir = project.projectDir
-	
+
 	air {
 			keystore        "${project.rootDir}/etc/cert/certificate.p12"
 			storepass       'bi-lingvo-zagadki'

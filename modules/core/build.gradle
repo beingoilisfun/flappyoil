@@ -2,4 +2,5 @@ type = 'swc'
 
 dependencies {
     merged project(':commons')
+    merged fileTree(dir: "${project.rootDir}/assets", include: '*.swc')
 }

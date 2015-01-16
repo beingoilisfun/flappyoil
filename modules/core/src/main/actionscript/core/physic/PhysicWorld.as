@@ -1,6 +1,7 @@
 package core.physic
 {
 	import core.math.Point;
+	import core.physic.geometry.RiggBody;
 	
 	public class PhysicWorld 
 	{

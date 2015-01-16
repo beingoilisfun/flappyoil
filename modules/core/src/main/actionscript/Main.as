@@ -1,7 +1,7 @@
 package 
 {
 	import core.physic.PhysicWorld;
-	import core.physic.RiggBody;
+	import core.physic.geometry.RiggBody;
 	import core.physic.Skin;
 	import core.ui.Background;
 	import core.WorldStep;
